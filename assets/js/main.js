@@ -1,4 +1,4 @@
-var x = document.getElementsByTabName("nav")[0]
+let x = document.getElementsByTabName("nav")[0]
 
 function toggleNav() {
     if (x.className == "") {
