@@ -1,10 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;900&display=swap');
-
 aside, nav, footer {
     padding: 10px;
 }
 
-html, body {
+html {
     height: 100%;
     box-sizing: border-box;
     margin: 0;
@@ -14,14 +12,20 @@ html, body {
     box-sizing: inherit;
 }
 
+/* background animation */
 body {
-    font-family: "Titillium Web", sans-serif;
-    font-size: 1.2rem;
+    background-color: #333;
+    background-image: radial-gradient(circle at top right, rgba(121, 68, 154, 0.13), transparent),
+        radial-gradient(circle at 20% 80%, rgba(41, 196, 255, 0.13), transparent)
 }
 
-h3, h1, p {
-    padding: 5px;
+canvas {
+    position: fixed;
+    width: 100%;
+    height: 100%;
 }
+
+/* ==================== */
 
 .container {
     height: 100%;
@@ -55,7 +59,7 @@ h1, p {
     display: none;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 800px) {
     .grid-wrapper {
         display: block;
     }
@@ -124,6 +128,11 @@ h3 {
     color: #000;
 }
 
+h1, h3 {
+    font-family: "Oswald", sans-serif;
+}
+
+
 .fab {
     font-size: 1.5rem;
     margin: 5px;
@@ -136,20 +145,13 @@ h3 {
 }
 
 
-/* responsive styles */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 800px) {
     .container {
         height: 100%;
         width: 100%;
-        background-image: url("../images/widescreen.jpg");
-        background-size: cover;
-        background-position: center;
-        background-blend-mode: screen;
+        display: flex;
+        flex-direction: column;
         color: #ddd;
-    }
-
-    .navlink {
-        display: none;
     }
 
     nav a:not(:first-child) {
